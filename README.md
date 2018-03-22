@@ -44,6 +44,5 @@ Try another PHP version (e.g. v7.1):
 
 Build image, tag appropriately and push to Docker Hub:
 
-    $ docker build . --tag dkdde/platformsh-cli
-    $ docker push 
+    $ docker build . --tag dkdde/platformsh-cli 
     $ docker push dkdde/platformsh-cli
