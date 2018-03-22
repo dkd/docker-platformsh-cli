@@ -12,11 +12,11 @@ to be run as [Docker Data Volume Container](https://docs.docker.com/engine/tutor
 
 Download latest Docker image:
 
-    $ docker pull dkdde/platformsh-cli:
+    $ docker pull dkdde/platformsh-cli
 
 or a specific version (tag):
 
-    $ docker pull dkdde/platformsh-cli:v3.19.1
+    $ docker pull dkdde/platformsh-cli:v3.31.1
 
 In this case `v3.19.1` references a Git tag in the platformsh-cli repository. See list of available tags at the [Docker Hub project page](https://hub.docker.com/r/dkdde/platformsh-cli/tags/). 
 
@@ -24,15 +24,15 @@ In this case `v3.19.1` references a Git tag in the platformsh-cli repository. Se
 
 Create data volume container, name it `platformsh-cli` and expose `/platformsh-cli`:
 
-    $ docker create -v /platformsh-cli --name platformsh-cli dkdde/platformsh-cli:latest /bin/true
+    $ docker create -v /platformsh-cli --name platformsh-cli dkdde/platformsh-cli:latest
 
 Mount and run platformsh-cli executable (PHP v7.0):
 
-    $ docker run -it --volumes-from platformsh-cli php:7.0-cli /platformsh-cli/platform --help
+    $ docker run -it --volumes-from platformsh-cli php:7.0-cli /platformsh-cli/platform
 
 Try another PHP version (e.g. v7.1):
 
-    $ docker run -it --volumes-from platformsh-cli php:7.1-cli /platformsh-cli/platform --help
+    $ docker run -it --volumes-from platformsh-cli php:7.1-cli /platformsh-cli/platform
 
 ### Development
 
